@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="her på siden kan du se vores personbiler">
+    <meta name="keywords" content="El, Bil,Miljøvenlig, Bærgedygtig, Vindhjul, Vedvarende energi,innovativt">
+    <title>Vores biler</title>
+    <link rel="stylesheet" href="common-style.css">
+    
+    <!--font awesome 5 fra W3school-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+   
+    </head>
+    
+    <body>
+        <div class="grid-container">
+        <!--header begins-->
+
+        <header class="header1">
+
+            <a href="http://www.pandalana.dk" class="logo">
+                <img class="header-logo" src="/El-images/GoGreen-logo2.png" alt="GoGreen-logo">
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li><a href="http://championjoe.dk/common.html">Vores biler</a></li>
+                <li><a href="http://www.saravujic.com">Køb og Leasing</a></li>
+                <li><a href="http://itopac.dk/common (5).html">Kontakt</a></li>
+            </ul>
+        </header>
+        
+
+        
+        
+        <!--Insert your main-->
+       
+
+        <div class="car-image">
+            <img class="our-car" src="/El-images/vores-biler-hovedbillede-code.jpg" alt="hvid-bil">
+        </div>
+        <!--biltyper menu-->
+        <div class="car-type">
+            <h2>Biltyper</h2>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Biltype</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Vores biler</a>
+    <a href="#">Seneste</a>
+    <a href="#">Nyhed</a>
+  </div>
+</div>
+
+<script>
+/* luk og åben når man klikker inde i menuen, 
+ */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// dropdown-menuet lukker hvis man klikker udenfor den
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<!--Omkring GoGreens biler-->
+        </div>
+        <div class="car-about-text">
+            <p>Her hos GoGreen
+                tilbyder vi Elbiler til
+                netop deres behov </p>
+        </div>
+        <div class="car-container1">
+            <img src="/El-images/hvid-bil-skygge.jpg" alt="hvid-bil">
+            <p>Den udbredte model S, 
+                Til dem som ønsker en
+                en enkelt tur</p>
+                <ul>
+                    <li>
+                        <a href="http://saravujic.com" >Læs mere</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="car-container2">
+            <img src="/El-images/grøn-bil-skygge.jpg" alt="grøn-bil">
+            <p>Den udbredte model C, 
+                Til dem som ønsker en
+                en sikker tur</p>
+                <ul>
+                    <li>
+                        <a href="http://saravujic.com">Læs mere</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="car-container3">
+            <img src="/El-images/blålig-bil-skygge.jpg" alt="blåbil">
+            <p>Den udbredte model X, 
+                Til dem som ønsker en
+                en lang tur</p>
+                <ul>
+                    <li>
+                        <a href="http://saravujic.com">Læs mere</a>
+                    </li>
+                </ul>
+        </div>
+        
+        
+        
+        
+        
+        <!--footer begins-->
+        <footer class="grid-footer">
+           <div class="footer-main">
+            <div class="left-box">
+                <h2>Følg os</h2>
+                <div class="content">
+                    <p>Følg os på de sociale medier</p>
+                
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                </div>
+                </div>
+                </div>
+                <!--center adresse-->
+                <div class="center-box">
+                <h2>Adresse</h2>
+                <div class="content"></div>
+                    <div class="place"></div>
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Lyngevej 21, 4600 køge</span>
+                    <div class="phone"></div>
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+45 00 92 89 76</span>
+                    <div class="mail"></div>
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">zealand</span>
+          </div> 
+        </div>
+        </footer>
+    </div>
+</body>
+</html> 

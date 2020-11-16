@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #ECF0EB;
+  }
+  
+  a {
+    color: #000;
+  }
+  
+  /* header */
+  
+  
+/*hexcode colorpalette
+
+color:#31878A; 
+color:#103D1D;
+color:#106B00;
+color:#E1EBE1;
+
+*/
+
+.grid-container{
+  display: grid;
+  height: 150vh;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  grid-template-rows:0.5fr 0.5fr 1fr 1fr 1fr ;  
+  grid-template-areas: 
+  "header"
+  "car-type"
+  "car-image"
+  "car-about-text"
+  "car-container1"
+  "car-container2"
+  "car-container3"
+  "footer";
+}
+
+  .header1 {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    grid-area: header;
+  }
+  
+  .header1 ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #106B00;
+  }
+  
+  .header1 li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    color: #f4f4f4;
+  }
+  
+  .header1 li a:hover,
+  .header1 .menu-btn:hover {
+    background-color: #f4f4f4;
+    color: #000;
+  }
+  
+  .logo {
+    display:block;
+    float: left;
+    padding: 20px;
+    margin: 25px;
+    text-decoration: none;
+    background-size: contain;
+
+  
+  }
+  .header-logo{
+    width: 150px;
+    height: 25px;
+    padding: 0;
+    margin: -30px;
+    
+  }
+
+  /* menu */
+  
+  .header1 .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header1 .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header1 .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header1 .menu-icon .nav-icon:before,
+  .header1 .menu-icon .nav-icon:after {
+    background: #000;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header1 .menu-icon .nav-icon:before {
+    top: 5px;
+  }
+  
+  .header1 .menu-icon .nav-icon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header1 .menu-btn {
+    display: none;
+  }
+  
+  .header1 .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header1 .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header1 .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-135deg);
+    top:0;
+  }
+  
+  .header1 .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(135deg);
+    top:0;
+  }
+
+  
+/*insert your main-style here*/
+
+.car-type{
+grid-area: car-type;
+}
+  .dropbtn {
+    background-color: #103D1D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 10px;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus{
+    background-color: #106B00;
+  }
+  
+  .dropdown {
+    position:fixed;
+    display: inline-block;
+  }
+  
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    max-width: 161px;
+
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+
+  /*blikfangsbillede*/
+
+.car-image{
+  grid-area: car-image;
+ 
+}
+.our-car{
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/*biltype select*/
+
+
+
+
+.car-about-text{
+  grid-area: car-about-text;
+  font-weight: bold;
+  color: #103D1D;
+  padding: 20px;
+
+}
+.car-container1{
+
+  grid-area: car-container1;
+}
+/*den første hvid bil*/
+
+.car-container1 img{
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+}
+.car-container1 p{
+  color:#103D1D; 
+}
+
+/*fælles knap ul li a*/
+
+ul li {
+  list-style-type: none;
+  text-decoration: none;
+  background-color:#106B00;
+  width: 157px;
+  height: 40px;
+  margin: 20px 68px;
+  cursor: pointer;
+
+}
+ ul li a{
+  color: #fff;
+  margin: 0 auto;
+  display: table;
+  padding-top: 10px;
+  
+}
+
+/*den grønne bil*/
+.car-container2{
+
+  grid-area: car-container2;
+}
+.car-container2 img{
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+}
+.car-container2 p{
+  color:#103D1D; 
+}
+
+
+/*den blå bil*/
+.car-container3{
+  grid-area: car-container3;
+}
+.car-container3 img{
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+}
+.car-container3 p{
+  color:#103D1D; 
+}
+
+
+
+
+
+/*footer begynder*/
+
+.grid-footer{
+  bottom: 0px;
+  width: 100%;
+  background: #31878A;
+  grid-area: footer;
+ 
+}
+
+.footer-main {
+  padding: 10px 15px;
+  margin: 10px; 
+}
+.left-box h2{
+  text-transform: uppercase;
+  color: #E1EBE1;
+}
+
+.center-box h2{
+  text-transform: uppercase;
+  color: #E1EBE1;
+}
+
